@@ -40,7 +40,7 @@ const Hero = ({ slice }: HeroProps) => {
           {isFilled.link(slice.primary.buttonLink) && (
             <PrismicNextLink
               field={slice.primary.buttonLink}
-              className="rounded bg-white px-5 py-3 font-medium text-slate-800"
+              className="rounded px-5 py-3 font-medium text-slate-800 bg-white"
             >
               {slice.primary.buttonText || "Learn More"}
             </PrismicNextLink>

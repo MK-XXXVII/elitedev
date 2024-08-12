@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    .bg-theme {
-        @apply bg-theme;
-    }
+body {
+    @apply bg-black text-white;
 }

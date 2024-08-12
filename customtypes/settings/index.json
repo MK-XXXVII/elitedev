@@ -10,7 +10,10 @@
         "type": "Image",
         "config": {
           "label": "Site Logo",
-          "constraint": {},
+          "constraint": {
+            "width": 80,
+            "height": 80
+          },
           "thumbnails": []
         }
       },

@@ -13,7 +13,7 @@ const Image = ({ slice, index }: ImageProps) => {
   return (
     <Bounded
       as="section"
-      className={clsx("bg-white", index === 0 && "pt-0 md:pt-0")}
+      className={clsx(index === 0 && "pt-0 md:pt-0")}
     >
       {isFilled.image(image) && (
         <div className="bg-gray-100">
