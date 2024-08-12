@@ -155,17 +155,6 @@ export type PageDocument<Lang extends string = string> =
  */
 interface SettingsDocumentData {
   /**
-   * Site Title field in *Settings*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: Title of the site
-   * - **API ID Path**: settings.siteTitle
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  siteTitle: prismic.TitleField;
-
-  /**
    * Site Logo field in *Settings*
    *
    * - **Field Type**: Image
@@ -175,6 +164,17 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   siteLogo: prismic.ImageField<never>;
+
+  /**
+   * Site Title field in *Settings*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: Title of the site
+   * - **API ID Path**: settings.siteTitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  siteTitle: prismic.TitleField;
 }
 
 /**
