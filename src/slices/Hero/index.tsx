@@ -17,32 +17,34 @@ const components: JSXMapSerializer = {
 type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
 const Hero = ({ slice }: HeroProps) => {
-  const backgroundImage = slice.primary.backgroundImage;
+  const { backgroundImage, text, buttonLink, buttonText } = slice.primary;
 
   return (
-    <section className="relative bg-slate-900 text-white">
+    <section className="relative text-white">
       {isFilled.image(backgroundImage) && (
         <PrismicNextImage
           field={backgroundImage}
           alt=""
           fill={true}
-          className="pointer-events-none select-none object-cover opacity-40"
+          className="pointer-events-none select-none max-h-[60vh] max-w-7xl object-cover mx-auto animate-fade-down animate-delay-75"
         />
       )}
       <Bounded yPadding="lg" className="relative">
-        <div className="grid justify-items-center gap-8">
-          <div className="max-w-4xl text-center">
+        <div className="grid justify-items-start gap-8 animate-fade-down animate-delay-300">
+          <div className="max-w-4xl text-left">
             <PrismicRichText
-              field={slice.primary.text}
+              field={text}
               components={components}
             />
           </div>
-          {isFilled.link(slice.primary.buttonLink) && (
+          {isFilled.link(buttonLink) && (
             <PrismicNextLink
-              field={slice.primary.buttonLink}
-              className="rounded px-5 py-3 font-medium text-slate-800 bg-white"
+              field={buttonLink}
+              className="
+              rounded px-5 py-3 font-medium text-black bg-green-500 
+              animate-wiggle-more animate-infinite animate-delay-700 animate-duration-1000"
             >
-              {slice.primary.buttonText || "Learn More"}
+              {buttonText || "Learn More"}
             </PrismicNextLink>
           )}
         </div>

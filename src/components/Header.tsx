@@ -15,12 +15,12 @@ async function Header() {
       <div className="flex flex-wrap items-center justify-between gap-y-2 leading-none">
         <PrismicNextLink
           href="/"
-          className="text-2xl md:text-3xl font-semibold tracking-tight"
+          className="text-2xl md:text-3xl font-semibold tracking-tight "
         >
           <div className="flex items-center">
             <PrismicNextImage
               field={settings.data.siteLogo}
-              className="mr-2 w-12 h-12 md:w-16 md:h-16" // Add some right margin to the logo
+              className="mr-2 w-12 h-12 md:w-16 md:h-16 animate-pulse" // Add some right margin to the logo
             />
             <div className="whitespace-nowrap">
               <PrismicText field={settings.data.siteTitle} />
